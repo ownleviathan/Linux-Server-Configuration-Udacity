@@ -29,7 +29,7 @@ Follow the instructions and the you can get 2 files **id_rsa** and** id_rsa.pub*
 > **Note: **I ran the command using Git-bash for windows. The files where stored in C:\Users\account_name\\.ssh
 
 
-**3. Change SSH port **
+**3. Change SSH port**
 
 Open the following file:
     `nano /etc/ssh/sshd_config`
@@ -42,4 +42,6 @@ Restart SSH service: `service ssh restart`
 Run the command:
 `# sudo dpkg-reconfigure tzdata`
 Then select `None of the Above` and then choose `UTC`
+
+**5. Setup Uncomplicated Firewall  (UFW)**
 
