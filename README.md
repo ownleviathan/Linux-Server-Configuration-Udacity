@@ -45,3 +45,17 @@ Then select `None of the Above` and then choose `UTC`
 
 **5. Setup Uncomplicated Firewall  (UFW)**
 
+Do the following commands:
+```
+sudo ufw status
+sudo ufw default deny incoming
+sudo ufw default deny outgoing
+sudo ufw allow 2200/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 123/udp
+sudo ufw deny 22
+sudo ufw enable
+sudo ufw status
+```
+Also on the AWS page go to networking tab add `Application Custom Protocol UPD Port 123` and `Application Custom Protocol TCP Port 2200`
+
