@@ -21,6 +21,7 @@ These are the steps to install a Linux Server and prepared it for Web applicatio
 
 
 **2. Set up SSH key**
+
 On your local machine create a public and private key pair.
 Run the next command:
 `$ ssh-keygen`
@@ -29,6 +30,7 @@ Follow the instructions and the you can get 2 files **id_rsa** and** id_rsa.pub*
 
 
 **3. Change SSH port **
+
 Open the following file:
     `nano /etc/ssh/sshd_config`
 Modify` #Port 22` for `Port 2200`
@@ -36,6 +38,7 @@ Restart SSH service: `service ssh restart`
 
 
 **4. Configure Timezone to Use UTC**
+
 Run the command:
 `# sudo dpkg-reconfigure tzdata`
 Then select `None of the Above` and then choose `UTC`
