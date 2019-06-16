@@ -1,1 +1,189 @@
 
+grader@ip-172-26-11-78:/var/www/FlaskApp$ sudo cat /var/log/apache2/error.log
+[Sun Jun 16 06:27:42.429479 2019] [mpm_event:notice] [pid 10446:tid 140397203905472] AH00489: Apache/2.4.29 (Ubuntu) configured -- resuming normal operations
+[Sun Jun 16 06:27:42.429569 2019] [core:notice] [pid 10446:tid 140397203905472] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 06:37:05.143952 2019] [mpm_event:notice] [pid 10446:tid 140397203905472] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 06:37:05.223920 2019] [mpm_event:notice] [pid 18871:tid 139757204945856] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 06:37:05.223991 2019] [core:notice] [pid 18871:tid 139757204945856] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 06:37:32.872140 2019] [mpm_event:notice] [pid 18871:tid 139757204945856] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 06:37:32.944976 2019] [mpm_event:notice] [pid 18997:tid 139861251980224] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 06:37:32.945045 2019] [core:notice] [pid 18997:tid 139861251980224] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:00:13.238652 2019] [mpm_event:notice] [pid 18997:tid 139861251980224] AH00493: SIGUSR1 received.  Doing graceful restart
+[Sun Jun 16 07:00:13.246615 2019] [mpm_event:notice] [pid 18997:tid 139861251980224] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:00:13.246626 2019] [core:notice] [pid 18997:tid 139861251980224] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:00:22.517923 2019] [mpm_event:notice] [pid 18997:tid 139861251980224] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:00:22.582172 2019] [mpm_event:notice] [pid 20177:tid 140238452038592] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:00:22.582243 2019] [core:notice] [pid 20177:tid 140238452038592] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:01:14.107688 2019] [mpm_event:notice] [pid 20177:tid 140238452038592] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:01:14.177525 2019] [mpm_event:notice] [pid 20269:tid 140318643784640] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:01:14.177595 2019] [core:notice] [pid 20269:tid 140318643784640] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:01:25.773760 2019] [wsgi:error] [pid 20273:tid 140318427035392] [client 73.151.38.128:3518] mod_wsgi (pid=20273): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:01:25.773782 2019] [wsgi:error] [pid 20273:tid 140318427035392] [client 73.151.38.128:3518] mod_wsgi (pid=20273): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:01:25.773796 2019] [wsgi:error] [pid 20273:tid 140318427035392] [client 73.151.38.128:3518] Traceback (most recent call last):
+[Sun Jun 16 07:01:25.773810 2019] [wsgi:error] [pid 20273:tid 140318427035392] [client 73.151.38.128:3518]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:01:25.773852 2019] [wsgi:error] [pid 20273:tid 140318427035392] [client 73.151.38.128:3518]     from application import app as application
+[Sun Jun 16 07:01:25.773867 2019] [wsgi:error] [pid 20273:tid 140318427035392] [client 73.151.38.128:3518] ImportError: No module named application
+[Sun Jun 16 07:01:42.353146 2019] [mpm_event:notice] [pid 20269:tid 140318643784640] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:01:42.417402 2019] [mpm_event:notice] [pid 20366:tid 139803700440000] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:01:42.417466 2019] [core:notice] [pid 20366:tid 139803700440000] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:01:46.078147 2019] [wsgi:error] [pid 20370:tid 139803550996224] [client 73.151.38.128:3525] mod_wsgi (pid=20370): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:01:46.078186 2019] [wsgi:error] [pid 20370:tid 139803550996224] [client 73.151.38.128:3525] mod_wsgi (pid=20370): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:01:46.078200 2019] [wsgi:error] [pid 20370:tid 139803550996224] [client 73.151.38.128:3525] Traceback (most recent call last):
+[Sun Jun 16 07:01:46.078212 2019] [wsgi:error] [pid 20370:tid 139803550996224] [client 73.151.38.128:3525]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:01:46.078251 2019] [wsgi:error] [pid 20370:tid 139803550996224] [client 73.151.38.128:3525]     from application import app as application
+[Sun Jun 16 07:01:46.078265 2019] [wsgi:error] [pid 20370:tid 139803550996224] [client 73.151.38.128:3525] ImportError: No module named application
+[Sun Jun 16 07:01:46.410772 2019] [wsgi:error] [pid 20369:tid 139803408434944] [client 73.151.38.128:3526] mod_wsgi (pid=20369): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: h
+[Sun Jun 16 07:01:46.410797 2019] [wsgi:error] [pid 20369:tid 139803408434944] [client 73.151.38.128:3526] mod_wsgi (pid=20369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'., referer: http://3.85.
+[Sun Jun 16 07:01:46.410811 2019] [wsgi:error] [pid 20369:tid 139803408434944] [client 73.151.38.128:3526] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:01:46.410825 2019] [wsgi:error] [pid 20369:tid 139803408434944] [client 73.151.38.128:3526]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:01:46.410865 2019] [wsgi:error] [pid 20369:tid 139803408434944] [client 73.151.38.128:3526]     from application import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:01:46.410880 2019] [wsgi:error] [pid 20369:tid 139803408434944] [client 73.151.38.128:3526] ImportError: No module named application, referer: http://3.85.137.110/
+[Sun Jun 16 07:08:28.196380 2019] [wsgi:error] [pid 20370:tid 139803458791168] [client 190.58.249.214:38238] mod_wsgi (pid=20370): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:28.196427 2019] [wsgi:error] [pid 20370:tid 139803458791168] [client 190.58.249.214:38238] mod_wsgi (pid=20370): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:28.196447 2019] [wsgi:error] [pid 20370:tid 139803458791168] [client 190.58.249.214:38238] Traceback (most recent call last):
+[Sun Jun 16 07:08:28.196469 2019] [wsgi:error] [pid 20370:tid 139803458791168] [client 190.58.249.214:38238]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:28.196499 2019] [wsgi:error] [pid 20370:tid 139803458791168] [client 190.58.249.214:38238]     from application import app as application
+[Sun Jun 16 07:08:28.196518 2019] [wsgi:error] [pid 20370:tid 139803458791168] [client 190.58.249.214:38238] ImportError: No module named application
+[Sun Jun 16 07:08:28.349400 2019] [wsgi:error] [pid 20369:tid 139803391649536] [client 190.58.249.214:40137] mod_wsgi (pid=20369): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:28.349424 2019] [wsgi:error] [pid 20369:tid 139803391649536] [client 190.58.249.214:40137] mod_wsgi (pid=20369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:28.349442 2019] [wsgi:error] [pid 20369:tid 139803391649536] [client 190.58.249.214:40137] Traceback (most recent call last):
+[Sun Jun 16 07:08:28.349459 2019] [wsgi:error] [pid 20369:tid 139803391649536] [client 190.58.249.214:40137]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:28.349488 2019] [wsgi:error] [pid 20369:tid 139803391649536] [client 190.58.249.214:40137]     from application import app as application
+[Sun Jun 16 07:08:28.349516 2019] [wsgi:error] [pid 20369:tid 139803391649536] [client 190.58.249.214:40137] ImportError: No module named application
+[Sun Jun 16 07:08:28.502531 2019] [wsgi:error] [pid 20370:tid 139803450398464] [client 190.58.249.214:40624] mod_wsgi (pid=20370): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:28.502548 2019] [wsgi:error] [pid 20370:tid 139803450398464] [client 190.58.249.214:40624] mod_wsgi (pid=20370): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:28.502562 2019] [wsgi:error] [pid 20370:tid 139803450398464] [client 190.58.249.214:40624] Traceback (most recent call last):
+[Sun Jun 16 07:08:28.502579 2019] [wsgi:error] [pid 20370:tid 139803450398464] [client 190.58.249.214:40624]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:28.502602 2019] [wsgi:error] [pid 20370:tid 139803450398464] [client 190.58.249.214:40624]     from application import app as application
+[Sun Jun 16 07:08:28.502617 2019] [wsgi:error] [pid 20370:tid 139803450398464] [client 190.58.249.214:40624] ImportError: No module named application
+[Sun Jun 16 07:08:28.655191 2019] [wsgi:error] [pid 20369:tid 139803383256832] [client 190.58.249.214:41191] mod_wsgi (pid=20369): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:28.655209 2019] [wsgi:error] [pid 20369:tid 139803383256832] [client 190.58.249.214:41191] mod_wsgi (pid=20369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:28.655224 2019] [wsgi:error] [pid 20369:tid 139803383256832] [client 190.58.249.214:41191] Traceback (most recent call last):
+[Sun Jun 16 07:08:28.655254 2019] [wsgi:error] [pid 20369:tid 139803383256832] [client 190.58.249.214:41191]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:28.655278 2019] [wsgi:error] [pid 20369:tid 139803383256832] [client 190.58.249.214:41191]     from application import app as application
+[Sun Jun 16 07:08:28.655293 2019] [wsgi:error] [pid 20369:tid 139803383256832] [client 190.58.249.214:41191] ImportError: No module named application
+[Sun Jun 16 07:08:28.807832 2019] [wsgi:error] [pid 20369:tid 139803366471424] [client 190.58.249.214:41564] mod_wsgi (pid=20369): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:28.807849 2019] [wsgi:error] [pid 20369:tid 139803366471424] [client 190.58.249.214:41564] mod_wsgi (pid=20369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:28.807863 2019] [wsgi:error] [pid 20369:tid 139803366471424] [client 190.58.249.214:41564] Traceback (most recent call last):
+[Sun Jun 16 07:08:28.807878 2019] [wsgi:error] [pid 20369:tid 139803366471424] [client 190.58.249.214:41564]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:28.807899 2019] [wsgi:error] [pid 20369:tid 139803366471424] [client 190.58.249.214:41564]     from application import app as application
+[Sun Jun 16 07:08:28.807912 2019] [wsgi:error] [pid 20369:tid 139803366471424] [client 190.58.249.214:41564] ImportError: No module named application
+[Sun Jun 16 07:08:28.960472 2019] [wsgi:error] [pid 20370:tid 139803442005760] [client 190.58.249.214:41952] mod_wsgi (pid=20370): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:28.960495 2019] [wsgi:error] [pid 20370:tid 139803442005760] [client 190.58.249.214:41952] mod_wsgi (pid=20370): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:28.960511 2019] [wsgi:error] [pid 20370:tid 139803442005760] [client 190.58.249.214:41952] Traceback (most recent call last):
+[Sun Jun 16 07:08:28.960533 2019] [wsgi:error] [pid 20370:tid 139803442005760] [client 190.58.249.214:41952]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:28.960569 2019] [wsgi:error] [pid 20370:tid 139803442005760] [client 190.58.249.214:41952]     from application import app as application
+[Sun Jun 16 07:08:28.960587 2019] [wsgi:error] [pid 20370:tid 139803442005760] [client 190.58.249.214:41952] ImportError: No module named application
+[Sun Jun 16 07:08:29.113550 2019] [wsgi:error] [pid 20369:tid 139803341293312] [client 190.58.249.214:42742] mod_wsgi (pid=20369): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:29.113580 2019] [wsgi:error] [pid 20369:tid 139803341293312] [client 190.58.249.214:42742] mod_wsgi (pid=20369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:29.113598 2019] [wsgi:error] [pid 20369:tid 139803341293312] [client 190.58.249.214:42742] Traceback (most recent call last):
+[Sun Jun 16 07:08:29.113616 2019] [wsgi:error] [pid 20369:tid 139803341293312] [client 190.58.249.214:42742]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:29.113655 2019] [wsgi:error] [pid 20369:tid 139803341293312] [client 190.58.249.214:42742]     from application import app as application
+[Sun Jun 16 07:08:29.113673 2019] [wsgi:error] [pid 20369:tid 139803341293312] [client 190.58.249.214:42742] ImportError: No module named application
+[Sun Jun 16 07:08:29.266431 2019] [wsgi:error] [pid 20370:tid 139803433613056] [client 190.58.249.214:45673] mod_wsgi (pid=20370): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:29.266455 2019] [wsgi:error] [pid 20370:tid 139803433613056] [client 190.58.249.214:45673] mod_wsgi (pid=20370): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:29.266471 2019] [wsgi:error] [pid 20370:tid 139803433613056] [client 190.58.249.214:45673] Traceback (most recent call last):
+[Sun Jun 16 07:08:29.266487 2019] [wsgi:error] [pid 20370:tid 139803433613056] [client 190.58.249.214:45673]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:29.266514 2019] [wsgi:error] [pid 20370:tid 139803433613056] [client 190.58.249.214:45673]     from application import app as application
+[Sun Jun 16 07:08:29.266532 2019] [wsgi:error] [pid 20370:tid 139803433613056] [client 190.58.249.214:45673] ImportError: No module named application
+[Sun Jun 16 07:08:29.419478 2019] [wsgi:error] [pid 20369:tid 139803316115200] [client 190.58.249.214:46213] mod_wsgi (pid=20369): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:08:29.419498 2019] [wsgi:error] [pid 20369:tid 139803316115200] [client 190.58.249.214:46213] mod_wsgi (pid=20369): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:08:29.419515 2019] [wsgi:error] [pid 20369:tid 139803316115200] [client 190.58.249.214:46213] Traceback (most recent call last):
+[Sun Jun 16 07:08:29.419535 2019] [wsgi:error] [pid 20369:tid 139803316115200] [client 190.58.249.214:46213]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:08:29.419562 2019] [wsgi:error] [pid 20369:tid 139803316115200] [client 190.58.249.214:46213]     from application import app as application
+[Sun Jun 16 07:08:29.419579 2019] [wsgi:error] [pid 20369:tid 139803316115200] [client 190.58.249.214:46213] ImportError: No module named application
+[Sun Jun 16 07:08:56.165305 2019] [mpm_event:notice] [pid 20366:tid 139803700440000] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:08:56.230356 2019] [mpm_event:notice] [pid 20482:tid 140002891779008] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:08:56.230422 2019] [core:notice] [pid 20482:tid 140002891779008] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:09:00.637795 2019] [wsgi:error] [pid 20485:tid 140002671437568] [client 73.151.38.128:3728] mod_wsgi (pid=20485): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:09:00.637829 2019] [wsgi:error] [pid 20485:tid 140002671437568] [client 73.151.38.128:3728] mod_wsgi (pid=20485): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:09:00.637844 2019] [wsgi:error] [pid 20485:tid 140002671437568] [client 73.151.38.128:3728] Traceback (most recent call last):
+[Sun Jun 16 07:09:00.637857 2019] [wsgi:error] [pid 20485:tid 140002671437568] [client 73.151.38.128:3728]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:09:00.637899 2019] [wsgi:error] [pid 20485:tid 140002671437568] [client 73.151.38.128:3728]     from FlaskApp import app as application
+[Sun Jun 16 07:09:00.637914 2019] [wsgi:error] [pid 20485:tid 140002671437568] [client 73.151.38.128:3728] ImportError: No module named FlaskApp
+[Sun Jun 16 07:09:01.423768 2019] [wsgi:error] [pid 20486:tid 140002713401088] [client 73.151.38.128:3729] mod_wsgi (pid=20486): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: h
+[Sun Jun 16 07:09:01.423794 2019] [wsgi:error] [pid 20486:tid 140002713401088] [client 73.151.38.128:3729] mod_wsgi (pid=20486): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'., referer: http://3.85.
+[Sun Jun 16 07:09:01.423808 2019] [wsgi:error] [pid 20486:tid 140002713401088] [client 73.151.38.128:3729] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:01.423822 2019] [wsgi:error] [pid 20486:tid 140002713401088] [client 73.151.38.128:3729]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:01.423863 2019] [wsgi:error] [pid 20486:tid 140002713401088] [client 73.151.38.128:3729]     from FlaskApp import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:01.423878 2019] [wsgi:error] [pid 20486:tid 140002713401088] [client 73.151.38.128:3729] ImportError: No module named FlaskApp, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:05.209721 2019] [wsgi:error] [pid 20485:tid 140002663044864] [client 73.151.38.128:3731] mod_wsgi (pid=20485): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:09:05.211470 2019] [wsgi:error] [pid 20485:tid 140002663044864] [client 73.151.38.128:3731] mod_wsgi (pid=20485): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:09:05.211497 2019] [wsgi:error] [pid 20485:tid 140002663044864] [client 73.151.38.128:3731] Traceback (most recent call last):
+[Sun Jun 16 07:09:05.211520 2019] [wsgi:error] [pid 20485:tid 140002663044864] [client 73.151.38.128:3731]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:09:05.211551 2019] [wsgi:error] [pid 20485:tid 140002663044864] [client 73.151.38.128:3731]     from FlaskApp import app as application
+[Sun Jun 16 07:09:05.211570 2019] [wsgi:error] [pid 20485:tid 140002663044864] [client 73.151.38.128:3731] ImportError: No module named FlaskApp
+[Sun Jun 16 07:09:05.709314 2019] [wsgi:error] [pid 20486:tid 140002705008384] [client 73.151.38.128:3730] mod_wsgi (pid=20486): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: h
+[Sun Jun 16 07:09:05.709351 2019] [wsgi:error] [pid 20486:tid 140002705008384] [client 73.151.38.128:3730] mod_wsgi (pid=20486): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'., referer: http://3.85.
+[Sun Jun 16 07:09:05.709370 2019] [wsgi:error] [pid 20486:tid 140002705008384] [client 73.151.38.128:3730] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:05.709389 2019] [wsgi:error] [pid 20486:tid 140002705008384] [client 73.151.38.128:3730]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:05.709427 2019] [wsgi:error] [pid 20486:tid 140002705008384] [client 73.151.38.128:3730]     from FlaskApp import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:09:05.709445 2019] [wsgi:error] [pid 20486:tid 140002705008384] [client 73.151.38.128:3730] ImportError: No module named FlaskApp, referer: http://3.85.137.110/
+[Sun Jun 16 07:14:32.756533 2019] [mpm_event:notice] [pid 20482:tid 140002891779008] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:14:32.819166 2019] [mpm_event:notice] [pid 20603:tid 140095452404672] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:14:32.819233 2019] [core:notice] [pid 20603:tid 140095452404672] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:14:38.877756 2019] [wsgi:error] [pid 20606:tid 140095231346432] [client 73.151.38.128:3773] mod_wsgi (pid=20606): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:14:38.877786 2019] [wsgi:error] [pid 20606:tid 140095231346432] [client 73.151.38.128:3773] mod_wsgi (pid=20606): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:14:38.877801 2019] [wsgi:error] [pid 20606:tid 140095231346432] [client 73.151.38.128:3773] Traceback (most recent call last):
+[Sun Jun 16 07:14:38.877815 2019] [wsgi:error] [pid 20606:tid 140095231346432] [client 73.151.38.128:3773]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:14:38.877860 2019] [wsgi:error] [pid 20606:tid 140095231346432] [client 73.151.38.128:3773]     from FlaskApp import app as application
+[Sun Jun 16 07:14:38.877876 2019] [wsgi:error] [pid 20606:tid 140095231346432] [client 73.151.38.128:3773] ImportError: No module named FlaskApp
+[Sun Jun 16 07:14:39.403614 2019] [wsgi:error] [pid 20607:tid 140095180990208] [client 73.151.38.128:3774] mod_wsgi (pid=20607): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: h
+[Sun Jun 16 07:14:39.403648 2019] [wsgi:error] [pid 20607:tid 140095180990208] [client 73.151.38.128:3774] mod_wsgi (pid=20607): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'., referer: http://3.85.
+[Sun Jun 16 07:14:39.403665 2019] [wsgi:error] [pid 20607:tid 140095180990208] [client 73.151.38.128:3774] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:14:39.403681 2019] [wsgi:error] [pid 20607:tid 140095180990208] [client 73.151.38.128:3774]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:14:39.403730 2019] [wsgi:error] [pid 20607:tid 140095180990208] [client 73.151.38.128:3774]     from FlaskApp import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:14:39.403748 2019] [wsgi:error] [pid 20607:tid 140095180990208] [client 73.151.38.128:3774] ImportError: No module named FlaskApp, referer: http://3.85.137.110/
+[Sun Jun 16 07:24:24.120774 2019] [mpm_event:notice] [pid 20603:tid 140095452404672] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:24:24.196826 2019] [mpm_event:notice] [pid 21187:tid 140692302867392] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:24:24.196903 2019] [core:notice] [pid 21187:tid 140692302867392] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:24:31.373911 2019] [wsgi:error] [pid 21191:tid 140692080797440] [client 73.151.38.128:3921] mod_wsgi (pid=21191): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:24:31.373938 2019] [wsgi:error] [pid 21191:tid 140692080797440] [client 73.151.38.128:3921] mod_wsgi (pid=21191): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:24:31.373953 2019] [wsgi:error] [pid 21191:tid 140692080797440] [client 73.151.38.128:3921] Traceback (most recent call last):
+[Sun Jun 16 07:24:31.373975 2019] [wsgi:error] [pid 21191:tid 140692080797440] [client 73.151.38.128:3921]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:24:31.374019 2019] [wsgi:error] [pid 21191:tid 140692080797440] [client 73.151.38.128:3921]     from FlaskApp import app as application
+[Sun Jun 16 07:24:31.374033 2019] [wsgi:error] [pid 21191:tid 140692080797440] [client 73.151.38.128:3921] ImportError: No module named FlaskApp
+[Sun Jun 16 07:24:32.251516 2019] [wsgi:error] [pid 21190:tid 140691996870400] [client 73.151.38.128:3922] mod_wsgi (pid=21190): Target WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: h
+[Sun Jun 16 07:24:32.251540 2019] [wsgi:error] [pid 21190:tid 140691996870400] [client 73.151.38.128:3922] mod_wsgi (pid=21190): Exception occurred processing WSGI script '/var/www/FlaskApp/FlaskApp/flaskapp.wsgi'., referer: http://3.85.
+[Sun Jun 16 07:24:32.251553 2019] [wsgi:error] [pid 21190:tid 140691996870400] [client 73.151.38.128:3922] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:24:32.251565 2019] [wsgi:error] [pid 21190:tid 140691996870400] [client 73.151.38.128:3922]   File "/var/www/FlaskApp/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:24:32.251603 2019] [wsgi:error] [pid 21190:tid 140691996870400] [client 73.151.38.128:3922]     from FlaskApp import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:24:32.251617 2019] [wsgi:error] [pid 21190:tid 140691996870400] [client 73.151.38.128:3922] ImportError: No module named FlaskApp, referer: http://3.85.137.110/
+[Sun Jun 16 07:27:00.608365 2019] [mpm_event:notice] [pid 21187:tid 140692302867392] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:27:00.676404 2019] [mpm_event:notice] [pid 21315:tid 140252947024832] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:27:00.676477 2019] [core:notice] [pid 21315:tid 140252947024832] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:27:04.454606 2019] [wsgi:error] [pid 21318:tid 140252727457536] [client 73.151.38.128:3936] Target WSGI script not found or unable to stat: /var/www/FlaskApp/FlaskApp/flaskapp.wsgi
+[Sun Jun 16 07:27:04.856254 2019] [wsgi:error] [pid 21318:tid 140252719064832] [client 73.151.38.128:3936] Target WSGI script not found or unable to stat: /var/www/FlaskApp/FlaskApp/flaskapp.wsgi, referer: http://3.85.137.110/
+[Sun Jun 16 07:28:53.017340 2019] [mpm_event:notice] [pid 21315:tid 140252947024832] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:28:53.079955 2019] [mpm_event:notice] [pid 21411:tid 139932368923584] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:28:53.080022 2019] [core:notice] [pid 21411:tid 139932368923584] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:28:55.578497 2019] [wsgi:error] [pid 21414:tid 139932148414208] [client 73.151.38.128:3944] mod_wsgi (pid=21414): Target WSGI script '/var/www/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:28:55.578518 2019] [wsgi:error] [pid 21414:tid 139932148414208] [client 73.151.38.128:3944] mod_wsgi (pid=21414): Exception occurred processing WSGI script '/var/www/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:28:55.578532 2019] [wsgi:error] [pid 21414:tid 139932148414208] [client 73.151.38.128:3944] Traceback (most recent call last):
+[Sun Jun 16 07:28:55.578544 2019] [wsgi:error] [pid 21414:tid 139932148414208] [client 73.151.38.128:3944]   File "/var/www/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:28:55.578583 2019] [wsgi:error] [pid 21414:tid 139932148414208] [client 73.151.38.128:3944]     from FlaskApp import app as application
+[Sun Jun 16 07:28:55.578597 2019] [wsgi:error] [pid 21414:tid 139932148414208] [client 73.151.38.128:3944] ImportError: No module named FlaskApp
+[Sun Jun 16 07:28:55.988867 2019] [wsgi:error] [pid 21415:tid 139931988952832] [client 73.151.38.128:3945] mod_wsgi (pid=21415): Target WSGI script '/var/www/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: http://3.8
+[Sun Jun 16 07:28:55.988892 2019] [wsgi:error] [pid 21415:tid 139931988952832] [client 73.151.38.128:3945] mod_wsgi (pid=21415): Exception occurred processing WSGI script '/var/www/FlaskApp/flaskapp.wsgi'., referer: http://3.85.137.110/
+[Sun Jun 16 07:28:55.988906 2019] [wsgi:error] [pid 21415:tid 139931988952832] [client 73.151.38.128:3945] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:28:55.988924 2019] [wsgi:error] [pid 21415:tid 139931988952832] [client 73.151.38.128:3945]   File "/var/www/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:28:55.988966 2019] [wsgi:error] [pid 21415:tid 139931988952832] [client 73.151.38.128:3945]     from FlaskApp import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:28:55.988980 2019] [wsgi:error] [pid 21415:tid 139931988952832] [client 73.151.38.128:3945] ImportError: No module named FlaskApp, referer: http://3.85.137.110/
+[Sun Jun 16 07:29:17.379286 2019] [mpm_event:notice] [pid 21411:tid 139932368923584] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:29:17.443991 2019] [mpm_event:notice] [pid 21499:tid 140203110095808] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:29:17.444057 2019] [core:notice] [pid 21499:tid 140203110095808] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:38:32.110290 2019] [mpm_event:notice] [pid 21499:tid 140203110095808] AH00491: caught SIGTERM, shutting down
+[Sun Jun 16 07:38:32.170823 2019] [mpm_event:notice] [pid 21621:tid 140367848082368] AH00489: Apache/2.4.29 (Ubuntu) mod_wsgi/4.5.17 Python/2.7 configured -- resuming normal operations
+[Sun Jun 16 07:38:32.170898 2019] [core:notice] [pid 21621:tid 140367848082368] AH00094: Command line: '/usr/sbin/apache2'
+[Sun Jun 16 07:38:35.501708 2019] [wsgi:error] [pid 21625:tid 140367626225408] [client 73.151.38.128:4134] mod_wsgi (pid=21625): Target WSGI script '/var/www/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module.
+[Sun Jun 16 07:38:35.501738 2019] [wsgi:error] [pid 21625:tid 140367626225408] [client 73.151.38.128:4134] mod_wsgi (pid=21625): Exception occurred processing WSGI script '/var/www/FlaskApp/flaskapp.wsgi'.
+[Sun Jun 16 07:38:35.501755 2019] [wsgi:error] [pid 21625:tid 140367626225408] [client 73.151.38.128:4134] Traceback (most recent call last):
+[Sun Jun 16 07:38:35.501772 2019] [wsgi:error] [pid 21625:tid 140367626225408] [client 73.151.38.128:4134]   File "/var/www/FlaskApp/flaskapp.wsgi", line 6, in <module>
+[Sun Jun 16 07:38:35.501836 2019] [wsgi:error] [pid 21625:tid 140367626225408] [client 73.151.38.128:4134]     from FlaskApp import app as application
+[Sun Jun 16 07:38:35.501855 2019] [wsgi:error] [pid 21625:tid 140367626225408] [client 73.151.38.128:4134] ImportError: No module named FlaskApp
+[Sun Jun 16 07:38:36.032526 2019] [wsgi:error] [pid 21624:tid 140367740618496] [client 73.151.38.128:4135] mod_wsgi (pid=21624): Target WSGI script '/var/www/FlaskApp/flaskapp.wsgi' cannot be loaded as Python module., referer: http://3.8
+[Sun Jun 16 07:38:36.032563 2019] [wsgi:error] [pid 21624:tid 140367740618496] [client 73.151.38.128:4135] mod_wsgi (pid=21624): Exception occurred processing WSGI script '/var/www/FlaskApp/flaskapp.wsgi'., referer: http://3.85.137.110/
+[Sun Jun 16 07:38:36.032581 2019] [wsgi:error] [pid 21624:tid 140367740618496] [client 73.151.38.128:4135] Traceback (most recent call last):, referer: http://3.85.137.110/
+[Sun Jun 16 07:38:36.032598 2019] [wsgi:error] [pid 21624:tid 140367740618496] [client 73.151.38.128:4135]   File "/var/www/FlaskApp/flaskapp.wsgi", line 6, in <module>, referer: http://3.85.137.110/
+[Sun Jun 16 07:38:36.032651 2019] [wsgi:error] [pid 21624:tid 140367740618496] [client 73.151.38.128:4135]     from FlaskApp import app as application, referer: http://3.85.137.110/
+[Sun Jun 16 07:38:36.032702 2019] [wsgi:error] [pid 21624:tid 140367740618496] [client 73.151.38.128:4135] ImportError: No module named FlaskApp, referer: http://3.85.137.110/
