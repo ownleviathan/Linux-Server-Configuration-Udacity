@@ -19,6 +19,7 @@ These are the steps to install a Linux Server and prepared it for Web applicatio
 - Select month payment
 - Click on `Create` button
 
+
 **2. Set up SSH key**
 On your local machine create a public and private key pair.
 Run the next command:
@@ -26,11 +27,13 @@ Run the next command:
 Follow the instructions and the you can get 2 files **id_rsa** and** id_rsa.pub**
 > **Note: **I ran the command using Git-bash for windows. The files where stored in C:\Users\account_name\\.ssh
 
+
 **3. Change SSH port **
 Open the following file:
     `nano /etc/ssh/sshd_config`
 Modify` #Port 22` for `Port 2200`
 Restart SSH service: `service ssh restart`
+
 
 **4. Configure Timezone to Use UTC**
 Run the command:
