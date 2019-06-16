@@ -43,6 +43,7 @@ Run the command:
 `# sudo dpkg-reconfigure tzdata`
 Then select `None of the Above` and then choose `UTC`
 
+
 **5. Setup Uncomplicated Firewall  (UFW)**
 
 Do the following commands:
@@ -58,6 +59,7 @@ sudo ufw enable
 sudo ufw status
 ```
 Also on the AWS page go to networking tab add `Application Custom Protocol UPD Port 123` and `Application Custom Protocol TCP Port 2200`
+
 
 **6. Setup `grader` user**
 
@@ -80,6 +82,7 @@ After the previews steps , go back to your local machine and copy the content of
 Then you can access using :
 `ssh grader@3.85.137.110 -p 2200`
 
+
 **7. Update Server**
 
 ```
@@ -87,6 +90,8 @@ apt-get update
 apt-get upgrade
 reboot
 ```
+
+
 **8. Install Apache Web Server**
 
 Using the grader user do:
@@ -96,13 +101,16 @@ sudo apt install apache2
 ```
 To confirm go to http://3.85.137.110/ and check if the apache default page shows up.
 
+
 **9. Install pip**
 
 The project is created on Python2.7
 Run the following command:
 `sudo apt install python-pip`
 
+
 **10. Install Postgress**
+
 Run the following commands:
 
 ```
@@ -117,6 +125,8 @@ GRANT ALL ON SCHEMA public TO catalog;
 \q
 exit
 ```
+
+
 **11. Install libraries**
 
 ```
@@ -129,6 +139,7 @@ sudo pip install --upgrade psycopg2
 sudo pip install --upgrade psycopg2-binary
 
 ```
+
 
 **12. Install Git and clone the project and update code**
 
@@ -208,13 +219,14 @@ Restart Apache Server
 `sudo service apache2 restart`
 
 
-
 **14. Check website and errors**
+
 Go to http://3.85.137.110/ and you should check the website
 
 if you are getting and errors, check the logs file:
 
 `sudo cat /var/log/apache2/error.log`
+
 
 # References
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
