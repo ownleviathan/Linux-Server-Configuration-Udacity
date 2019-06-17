@@ -8,7 +8,7 @@ These are the steps to install a Linux Server and prepared it for Web applicatio
 - **IP address** : 18.196.167.64
 - **SSH login username:** grader
 - **SSH port :** 2200
-- **URL :** http://3.85.137.110/
+- **URL :** http://3.85.137.110.xip.io
 
 # Configuration Steps
 
