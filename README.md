@@ -82,8 +82,17 @@ After the previews steps , go back to your local machine and copy the content of
 Then you can access using :
 `ssh grader@3.85.137.110 -p 2200`
 
+**7. Disable root login**
 
-**7. Update Server**
+Run the following command:
+`sudo nano /etc/ssh/sshd_config`
+
+Uncomment the directive **PermitRootLogin** and set its value to **no**
+
+Restart SSH service: `service ssh restart`
+
+
+**8. Update Server**
 
 ```
 apt-get update 
@@ -92,7 +101,7 @@ reboot
 ```
 
 
-**8. Install Apache Web Server**
+**9. Install Apache Web Server**
 
 Using the grader user do:
 ```
@@ -102,14 +111,14 @@ sudo apt install apache2
 To confirm go to http://3.85.137.110/ and check if the apache default page shows up.
 
 
-**9. Install pip**
+**10. Install pip**
 
 The project is created on Python2.7
 Run the following command:
 `sudo apt install python-pip`
 
 
-**10. Install Postgress**
+**11. Install Postgress**
 
 Run the following commands:
 
@@ -127,7 +136,7 @@ exit
 ```
 
 
-**11. Install libraries**
+**12. Install libraries**
 
 Using `grader` account:
 
@@ -143,7 +152,7 @@ sudo pip install --upgrade psycopg2-binary
 ```
 
 
-**12. Install Git and clone the project and update code**
+**13. Install Git and clone the project and update code**
 
 For ubuntu 18.04lts git is preinstalled, but this is command if you are using a different version:
 
@@ -170,7 +179,20 @@ Setup the database on postgress
 `python /var/www/FlaskApp/FlaskApp/database_setup.py`
 
 
-**13. Setup Apache and Run Flask**
+**14. Setup Google Authentication login**
+
+- Go to the Google[ API Console](https://console.developers.google.com/project/_/apiui/apis/library " API Console")  .
+- Under **Credentials section** click on `Create Credential` 
+- Create an OAuth Client ID (under the Credentials tab), and add http://3.85.137.110 and http://ec2-18-196-167-64.eu-central-1.compute.amazonaws.com as authorized JavaScript origins.
+- Add ec2-18-196-167-64.eu-central-1.compute.amazonaws.com/oauth2callback as authorized redirect URI.
+- Download the corresponding JSON file, open it et copy the contents.
+- Open /var/www/FlaskApp/FlaskApp/client_secret.json and paste the previous contents into the this file.
+`sudo nano /var/www/FlaskApp/FlaskApp/client_secret.json `
+- Replace the `client_id` on the templates/layout.html file in the project directory.
+`sudo nano /var/www/FlaskApp/FlaskApp/templates/layout.html`
+
+
+**15. Setup Apache and Run Flask**
 
 Configure the virtual hosts:
 `sudo nano /etc/apache2/sites-available/FlaskApp.conf`
@@ -221,7 +243,7 @@ Restart Apache Server
 `sudo service apache2 restart`
 
 
-**14. Check website and errors**
+**16. Check website and errors**
 
 Go to http://3.85.137.110/ and you should check the website
 
@@ -230,15 +252,6 @@ if you are getting and errors, check the logs file:
 `sudo cat /var/log/apache2/error.log`
 
 
-**15. Disable root login**
-
-Run the following command:
-`sudo nano /etc/ssh/sshd_config`
-
-Uncomment the directive **PermitRootLogin** and set its value to **no**
-
-Restart SSH service: `service ssh restart`
-Done!
 
 # References
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
