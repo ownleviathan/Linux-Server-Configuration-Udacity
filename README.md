@@ -199,19 +199,26 @@ Configure the virtual hosts:
 
 Add the following lines on it:
 ```
-   ServerName 3.85.137.110
-   ServerAdmin youremail@domain.com
-   WSGIScriptAlias / /var/www/FlaskApp/FlaskApp/flaskapp.wsgi
-   <Directory /var/www/FlaskApp/FlaskApp/>
-       Require all granted
-   </Directory>
-   Alias /static /var/www/FlaskApp/FlaskApp/static
-   <Directory /var/www/FlaskApp/FlaskApp/static/>
-       Require all granted
-   </Directory>
-   ErrorLog ${APACHE_LOG_DIR}/error.log
-   LogLevel warn
-   CustomLog ${APACHE_LOG_DIR}/access.log combined
+<VirtualHost *:80>
+    ServerName 3.85.137.110.xip.io
+    ServerAdmin edwinperez@gmail.com
+    WSGIDaemonProcess myapp python-path=/var/www/FlaskApp/FlaskApp
+    WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi process-group=myapp application-group=%{GLOBAL}
+    <Directory /var/www/FlaskApp>
+    <Files flaskapp.wsgi>
+        Order allow,deny
+        Allow from all
+    </Files>
+    </Directory>
+    Alias /static /var/www/FlaskApp/FlaskApp/static
+    <Directory /var/www/FlaskApp/FlaskApp/static/>
+        Order allow,deny
+        Allow from all
+    </Directory>
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    LogLevel warn
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+
 </VirtualHost>
 
 ```
@@ -226,7 +233,7 @@ sudo service apache2 restart
 Create the .wsgi File
 
 ```
-cd /var/www/FlaskApp/FlaskApp/
+cd /var/www/FlaskApp/
 sudo nano flaskapp.wsgi
 ```
 Add the following lines to that file:
@@ -235,9 +242,11 @@ Add the following lines to that file:
 import sys
 import logging
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0, "/var/www/FlaskApp/FlaskApp/")
+sys.path.insert(0, "/var/www/FlaskApp/")
 
 from FlaskApp import app as application
+application.secret_key = 'mysupersecretkey'
+
 ```
 Restart Apache Server
 `sudo service apache2 restart`
@@ -245,7 +254,7 @@ Restart Apache Server
 
 **16. Check website and errors**
 
-Go to http://3.85.137.110/ and you should check the website
+Go to http://3.85.137.110.xip.io and you should check the website
 
 if you are getting and errors, check the logs file:
 
