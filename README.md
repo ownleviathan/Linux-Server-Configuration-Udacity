@@ -228,5 +228,15 @@ if you are getting and errors, check the logs file:
 `sudo cat /var/log/apache2/error.log`
 
 
+**15. Disable root login**
+
+Run the following command:
+`sudo nano /etc/ssh/sshd_config`
+
+Uncomment the directive **PermitRootLogin** and set its value to **no**
+
+Restart SSH service: `service ssh restart`
+Done!
+
 # References
 https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
