@@ -183,8 +183,8 @@ Setup the database on postgress
 
 - Go to the Google[ API Console](https://console.developers.google.com/project/_/apiui/apis/library " API Console")  .
 - Under **Credentials section** click on `Create Credential` 
-- Create an OAuth Client ID (under the Credentials tab), and add http://3.85.137.110 and http://ec2-18-196-167-64.eu-central-1.compute.amazonaws.com as authorized JavaScript origins.
-- Add ec2-18-196-167-64.eu-central-1.compute.amazonaws.com/oauth2callback as authorized redirect URI.
+- Create an OAuth Client ID (under the Credentials tab), and add http://3.85.137.110.xip.io as authorized JavaScript origins.
+- Add http://3.85.137.110.xip.io/login and http://3.85.137.110.xip.io/gconnect as authorized redirect URI.
 - Download the corresponding JSON file, open it et copy the contents.
 - Open /var/www/FlaskApp/FlaskApp/client_secret.json and paste the previous contents into the this file.
 `sudo nano /var/www/FlaskApp/FlaskApp/client_secret.json `
